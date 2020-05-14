@@ -14,7 +14,7 @@ Specification:
 * (In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)
 
 
-# Domain modeling
+# Domain modelling
 
 Objects         Methods
 Thermostat      temp

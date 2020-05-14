@@ -90,13 +90,13 @@ describe("Thermostat", function() {
 
   });
 
-  describe("when powerSave is ON and temp is at MAX", function() {
+  describe("when powerSave is ON and temp is at MAX 25", function() {
     it("temp cant increase beyond 25", function() {
       for (var i = 0; i < 5; i++) {
         thermostat.incr_temp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.incr_temp).toMatch("you've reached max temp")
+      expect(thermostat.incr_temp).toMatch("you've reached the maximum temperature")
     })
   });
 
@@ -110,15 +110,25 @@ describe("Thermostat", function() {
     })
   });
 
-  describe("when powerSave is OFF and temp is at MAX", function() {
+  describe("when powerSave is OFF and temp is at MAX 32", function() {
     it("temp cant increase beyond 32", function() {
       thermostat.powerSaveOff()
       for (var i = 0; i < 13; i++) {
         thermostat.incr_temp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.incr_temp).toMatch("you've reached max temp")
+      expect(thermostat.incr_temp).toMatch("you've reached the maximum temperature")
     })
+  });
+
+  describe("when MINTEMP is 10", function() {
+    it("can't get a temp of 9", function() {
+      for(var i = 0; i < 11; i--) {
+        thermostat.decr_temp()
+      }
+      console.log(thermostat.temp)
+      expect(thermostat.decr_temp).toMatch("you've reached the minimum temperature")
+    });
   });
 
 });
