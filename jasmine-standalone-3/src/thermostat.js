@@ -4,6 +4,7 @@ class Thermostat {
 
   constructor() {
     this.temp = 20;
+    // this.energy_usage_level = "medium usage"
     this.MINTEMP = 10;
     this.MAXTEMP = 25;
   };
@@ -26,6 +27,19 @@ class Thermostat {
 
   reset_temp() {
     this.temp = 20
+  }
+
+  current_energy_usage() {
+    if ( this.temp < 18 ) {
+       // this.energy_usage_level = "low usage";
+       return "low usage"
+    } else if ( this.temp >= 25 ) {
+        // return this.energy_usage_level = "high usage";
+        return "high usage"
+    } else {
+        // return this.energy_usage_level = "medium usage";
+        return "medium usage"
+    }
   }
 
 };

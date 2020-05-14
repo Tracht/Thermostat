@@ -63,4 +63,33 @@ describe("Thermostat", function() {
     });
   });
 
+  describe("current energy usage", function() {
+    it("returns low when temp is 17", function() {
+      for (var i = 0; i < 4; i++) {
+        thermostat.decr_temp();
+      }
+      console.log(thermostat.temp)
+      expect(thermostat.current_energy_usage).toMatch("low usage")
+    });
+
+    it("returns medium when temp is 23", function() {
+      for (var i = 0; i < 3; i++) {
+        thermostat.incr_temp();
+      }
+      console.log(thermostat.temp)
+      expect(thermostat.current_energy_usage).toMatch("medium usage")
+    });
+
+    it("returns high when temp is 26", function() {
+      for (var i = 0; i < 6; i++) {
+        thermostat.incr_temp();
+      }
+      console.log(thermostat.temp)
+      expect(thermostat.current_energy_usage).toMatch("high usage")
+    });
+
+  });
+
+
+
 });
