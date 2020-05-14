@@ -28,4 +28,10 @@ describe("Thermostat", function() {
     });
   });
 
+  describe("minimum temp", function() {
+    it("is 10", function() {
+      expect(thermostat.MINTEMP).toBe(10)
+    });
+  });
+
 });

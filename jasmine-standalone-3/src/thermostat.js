@@ -4,6 +4,7 @@ class Thermostat {
 
   constructor() {
     this.temp = 20;
+    this.MINTEMP = 10;
   };
 
   incr_temp() {
