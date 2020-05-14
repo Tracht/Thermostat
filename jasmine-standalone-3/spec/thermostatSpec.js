@@ -34,4 +34,10 @@ describe("Thermostat", function() {
     });
   });
 
+  describe("maximum temp", function() {
+    it("is 25", function() {
+      expect(thermostat.MAXTEMP).toBe(25)
+    });
+  });
+
 });
