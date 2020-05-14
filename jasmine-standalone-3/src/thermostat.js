@@ -10,4 +10,8 @@ class Thermostat {
     this.temp += 1;
   }
 
+  decr_temp() {
+    this.temp -= 1;
+  }
+
 };

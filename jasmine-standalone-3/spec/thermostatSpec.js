@@ -21,5 +21,11 @@ describe("Thermostat", function() {
     });
   });
 
+  describe("decrease temperature", function() {
+    it("by -1", function() {
+      thermostat.decr_temp()
+      expect(thermostat.temp).toBe(19)
+    });
+  });
 
 });
