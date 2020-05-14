@@ -90,6 +90,35 @@ describe("Thermostat", function() {
 
   });
 
+  describe("when powerSave is ON and temp is at MAX", function() {
+    it("temp cant increase beyond 25", function() {
+      for (var i = 0; i < 5; i++) {
+        thermostat.incr_temp();
+      }
+      console.log(thermostat.temp)
+      expect(thermostat.incr_temp).toMatch("you've reached max temp")
+    })
+  });
 
+  describe("when powerSave is ON and temp is at 20", function() {
+    it("temp can increase from 20 to 22", function() {
+      for (var i = 0; i < 2; i++) {
+        thermostat.incr_temp();
+      }
+      console.log(thermostat.temp)
+      expect(thermostat.temp).toBe(22)
+    })
+  });
+
+  describe("when powerSave is OFF and temp is at MAX", function() {
+    it("temp cant increase beyond 32", function() {
+      thermostat.powerSaveOff()
+      for (var i = 0; i < 13; i++) {
+        thermostat.incr_temp();
+      }
+      console.log(thermostat.temp)
+      expect(thermostat.incr_temp).toMatch("you've reached max temp")
+    })
+  });
 
 });

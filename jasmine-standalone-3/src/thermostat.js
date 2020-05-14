@@ -10,6 +10,9 @@ class Thermostat {
   };
 
   incr_temp() {
+    if (this.temp === this.MAXTEMP) {
+     return  "you've reached max temp"
+    }
     this.temp += 1;
   }
 
