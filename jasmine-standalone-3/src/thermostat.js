@@ -16,9 +16,16 @@ class Thermostat {
     this.temp -= 1;
   }
 
-  // powerSaveOn()
-  //   this.MAXTEMP = 25
-  //
-  // powerSaveOff()
-  //   this.MAXTEMP = 32
+  powerSaveOn() {
+    this.MAXTEMP = 25
+  }
+
+  powerSaveOff() {
+    this.MAXTEMP = 32
+  }
+
+  reset_temp() {
+    this.temp = 20
+  }
+
 };

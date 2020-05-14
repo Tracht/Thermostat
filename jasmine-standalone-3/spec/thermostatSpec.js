@@ -34,9 +34,32 @@ describe("Thermostat", function() {
     });
   });
 
-  describe("maximum temp", function() {
-    it("is 25", function() {
+  describe("when initialized powersave is on", function() {
+    it("so temp is 25", function() {
       expect(thermostat.MAXTEMP).toBe(25)
+    });
+  });
+
+  describe("when powersaving mode is ON", function() {
+    it("MAXTEMP is 25", function() {
+      thermostat.powerSaveOff()
+      thermostat.powerSaveOn()
+      expect(thermostat.MAXTEMP).toBe(25)
+    });
+  });
+
+  describe("when powersaving mode is OFF", function() {
+    it("MAXTEMP is 32", function() {
+      thermostat.powerSaveOn()
+      thermostat.powerSaveOff()
+      expect(thermostat.MAXTEMP).toBe(32)
+    });
+  });
+
+  describe("reset temp", function() {
+    it("temp is 20", function() {
+      thermostat.reset_temp()
+      expect(thermostat.temp).toBe(20)
     });
   });
 
