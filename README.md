@@ -15,11 +15,12 @@ Specification:
 
 # Domain modelling
 
-Objects         Methods
-Thermostat      temp
-                incr_temp
-                decr_temp
-                turn_on_powersave
-                turn_off_powersave
-                reset_temp
-                return_current_energy_usage
+Objects & Methods
+* Thermostat     
+* * temp
+* * incr_temp
+* * decr_temp
+* * turn_on_powersave
+* * turn_off_powersave
+* * reset_temp
+* * return_current_energy_usage
