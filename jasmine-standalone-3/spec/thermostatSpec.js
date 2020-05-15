@@ -131,4 +131,17 @@ describe("Thermostat", function() {
     });
   });
 
+  describe("when user turns on powerSave", function() {
+    it("isPowerSaveOn displays 'ON' to the user", function() {
+      expect(thermostat.isPowerSaveOn).toMatch("power saving mode is ON")
+    });
+  });
+
+  describe("when user turns off powerSave", function() {
+    it("isPowerSaveOn displays 'OFF' to the user", function() {
+      thermostat.powerSaveOff()
+      expect(thermostat.isPowerSaveOn).toMatch("power saving mode is OFF")
+    })
+  })
+
 });
