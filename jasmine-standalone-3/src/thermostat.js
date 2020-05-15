@@ -6,13 +6,12 @@ class Thermostat {
     this.temp = 20;
     this.MINTEMP = 10;
     this.MAXTEMP = 25;
-    // this.display = "hello, I'm your thermostat!"
+    this.display = "hello, I'm your thermostat!"
   };
 
   incrTemp() {
     if (this.temp === this.MAXTEMP) {
-     // return this.display = "you've reached the maximum temperature"
-     return  "you've reached the maximum temperature"
+     return this.display = "you've reached the maximum temperature"
     }
     this.temp += 1;
   }

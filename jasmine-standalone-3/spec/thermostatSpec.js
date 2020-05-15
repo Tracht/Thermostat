@@ -144,4 +144,26 @@ describe("Thermostat", function() {
     })
   })
 
+
+  describe("when MAX temp is reached & powerSaveOn (25)", function() {
+    it("displays message to user", function() {
+      for (var i = 0; i < 5; i++) {
+        thermostat.incrTemp();
+      }
+      console.log(thermostat.temp);
+      expect(thermostat.display).toMatch("you've reached the maximum temperature")
+    });
+  });
+
+
+  describe("when MAX temp is reached & powerSaveOff (32)", function() {
+    it("displays message to user", function() {
+      for(var i=0; i<16; i++) {
+        thermostat.incrTemp();
+      }
+      console.log(thermostat.temp);
+      expect(thermostat.display).toMatch("you've reached the maximum temperature")
+    });
+  });
+
 });
