@@ -16,14 +16,14 @@ describe("Thermostat", function() {
 
   describe("increase temperature", function() {
     it("by 1", function() {
-      thermostat.incr_temp()
+      thermostat.incrTemp()
       expect(thermostat.temp).toBe(21)
     });
   });
 
   describe("decrease temperature", function() {
     it("by -1", function() {
-      thermostat.decr_temp()
+      thermostat.decrTemp()
       expect(thermostat.temp).toBe(19)
     });
   });
@@ -58,7 +58,7 @@ describe("Thermostat", function() {
 
   describe("reset temp", function() {
     it("temp is 20", function() {
-      thermostat.reset_temp()
+      thermostat.resetTemp()
       expect(thermostat.temp).toBe(20)
     });
   });
@@ -66,26 +66,26 @@ describe("Thermostat", function() {
   describe("current energy usage", function() {
     it("returns low when temp is 17", function() {
       for (var i = 0; i < 4; i++) {
-        thermostat.decr_temp();
+        thermostat.decrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.current_energy_usage).toMatch("low usage")
+      expect(thermostat._currentEnergyUsage).toMatch("low-energy-usage")
     });
 
     it("returns medium when temp is 23", function() {
       for (var i = 0; i < 3; i++) {
-        thermostat.incr_temp();
+        thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.current_energy_usage).toMatch("medium usage")
+      expect(thermostat._currentEnergyUsage).toMatch("medium-energy-usage")
     });
 
     it("returns high when temp is 26", function() {
       for (var i = 0; i < 6; i++) {
-        thermostat.incr_temp();
+        thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.current_energy_usage).toMatch("high usage")
+      expect(thermostat._currentEnergyUsage).toMatch("high-energy-usage")
     });
 
   });
@@ -93,17 +93,17 @@ describe("Thermostat", function() {
   describe("when powerSave is ON and temp is at MAX 25", function() {
     it("temp cant increase beyond 25", function() {
       for (var i = 0; i < 5; i++) {
-        thermostat.incr_temp();
+        thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.incr_temp).toMatch("you've reached the maximum temperature")
+      expect(thermostat.incrTemp).toMatch("you've reached the maximum temperature")
     })
   });
 
   describe("when powerSave is ON and temp is at 20", function() {
     it("temp can increase from 20 to 22", function() {
       for (var i = 0; i < 2; i++) {
-        thermostat.incr_temp();
+        thermostat.incrTemp();
       }
       console.log(thermostat.temp)
       expect(thermostat.temp).toBe(22)
@@ -114,20 +114,20 @@ describe("Thermostat", function() {
     it("temp cant increase beyond 32", function() {
       thermostat.powerSaveOff()
       for (var i = 0; i < 13; i++) {
-        thermostat.incr_temp();
+        thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.incr_temp).toMatch("you've reached the maximum temperature")
+      expect(thermostat.incrTemp).toMatch("you've reached the maximum temperature")
     })
   });
 
   describe("when MINTEMP is 10", function() {
     it("can't get a temp of 9", function() {
       for(var i = 0; i < 11; i--) {
-        thermostat.decr_temp()
+        thermostat.decrTemp()
       }
       console.log(thermostat.temp)
-      expect(thermostat.decr_temp).toMatch("you've reached the minimum temperature")
+      expect(thermostat.decrTemp).toMatch("you've reached the minimum temperature")
     });
   });
 

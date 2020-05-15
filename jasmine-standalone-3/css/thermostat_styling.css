@@ -1,0 +1,11 @@
+.low-energy-usage {
+  color: green;
+}
+
+.medium-energy-usage {
+  color: black;
+}
+
+.high-energy-usage {
+  color: red;
+}

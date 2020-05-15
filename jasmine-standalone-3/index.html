@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title> Thermostat </title>
+    <title> Thermostat </title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/thermostat_styling.css">
   </head>
-
   <body>
       <section>
-          <h1 id="temperature"></h1>
+          <h1 id="temp"></h1>
+          <h1 id="_currentEnergyUsage"></h1>
           <p>
-            <button id= "incr_temp" type="button" name="incr_temp"> + </button>
-            <button id= "decr_temp" type="button" name="decr_temp"> - </button>
-            <button id= "reset_temp" type="button" name="reset_temp"> reset </button>
-            power saving mode is <span id="isPowerSaveOn">ON</span>
+            <button id= "incrTemp" type="button" name="incrTemp"> + </button>
+            <button id= "decrTemp" type="button" name="decrTemp"> - </button>
+            <button id= "resetTemp" type="button" name="resetTemp"> reset </button>
+            <span id="isPowerSaveOn"> </p> </span>
             <button id= "powerSaveOn" type="button" name="powerSaveOn"> power save ON </button>
             <button id= "powerSaveOff" type="button" name="powerSaveOff"> power save OFF </button>
           </p>
       </section>
 
-      <script src="src/thermostat.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script  type="text/javascript"  src="src/thermostat.js"></script>
+    <script  type="text/javascript"  src="src/interface.js"></script>
   </body>
-
 </html>
