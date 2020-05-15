@@ -33,7 +33,7 @@ class Thermostat {
     this.MAXTEMP = 32
   }
 
-  isPowerSaveOn() {
+  _isPowerSaveOn() {
     if (this.MAXTEMP === 25) {
       return "power saving mode is ON"
     }
