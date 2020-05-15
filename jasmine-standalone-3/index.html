@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title> Thermostat </title>
   </head>
+
   <body>
       <section>
           <h1 id="temperature"></h1>
           <p>
-            <button id= "incr_temp" type="button" name="incr_temp"></button>
-            <button id= "decr_temp" type="button" name="decr_temp"></button>
-            <button id= "reset_temp" type="button" name="reset_temp"></button>
-            <button id= "powerSaveOn" type="button" name="powerSaveOn"></button>
-            <button id= "powerSaveOff" type="button" name="powerSaveOff"></button>
+            <button id= "incr_temp" type="button" name="incr_temp"> + </button>
+            <button id= "decr_temp" type="button" name="decr_temp"> - </button>
+            <button id= "reset_temp" type="button" name="reset_temp"> reset </button>
             power saving mode is <span id="isPowerSaveOn">ON</span>
+            <button id= "powerSaveOn" type="button" name="powerSaveOn"> power save ON </button>
+            <button id= "powerSaveOff" type="button" name="powerSaveOff"> power save OFF </button>
           </p>
       </section>
 
-
-      
       <script src="src/thermostat.js"></script>
   </body>
+
 </html>
