@@ -6,21 +6,22 @@ class Thermostat {
     this.temp = 20;
     this.MINTEMP = 10;
     this.MAXTEMP = 25;
-    this.display = "hello, I'm your thermostat!"
+    this.display = "Temperature (C) is currently at:"
   };
 
   incrTemp() {
-    if (this.temp === this.MAXTEMP) {
+    if (this.temp >= this.MAXTEMP) {
      return this.display = "you've reached the maximum temperature"
     }
+    this.display = "Temperature (C) is currently at:"
     this.temp += 1;
   }
 
   decrTemp() {
-    if (this.temp === this.MINTEMP) {
-      // return this.display = "you've reached the minimum temperature"
-      return "you've reached the minimum temperature"
+    if (this.temp <= this.MINTEMP) {
+      return this.display = "you've reached the lowest temperature"
     }
+    this.display = "Temperature (C) is currently at:"
     this.temp -= 1;
   }
 
@@ -32,6 +33,11 @@ class Thermostat {
     this.MAXTEMP = 32
   }
 
+  resetTemp() {
+    this.temp = 20
+  }
+
+  // private method
   _isPowerSaveOn() {
     if (this.MAXTEMP === 25) {
       return "power saving mode is ON"
@@ -41,20 +47,12 @@ class Thermostat {
     }
   }
 
-  resetTemp() {
-    this.temp = 20
-  }
-
-  // private method
   _currentEnergyUsage() {
     if ( this.temp < 18 ) {
-       // return this.display = "you are at low usage"
        return "low-energy-usage"
     } else if ( this.temp >= 25 ) {
-      // return this.display = "you are at high usage"
         return "high-energy-usage"
     } else {
-      // return this.display = "you are at medium usage"
         return "medium-energy-usage"
     }
   }

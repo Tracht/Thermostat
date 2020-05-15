@@ -21,15 +21,16 @@ $(document).ready(function() {
     thermostat.powerSaveOn();
     $('#_isPowerSaveOn').text(thermostat._isPowerSaveOn())
     updateTemp();
-  })
+  });
 
-  $('powerSaveOff').on('click', function() {
+  $('#powerSaveOff').on('click', function() {
     thermostat.powerSaveOff();
-    $('#_isPowerSaveOn'.text('off'))
+    $('#_isPowerSaveOn').text(thermostat._isPowerSaveOn())
     updateTemp();
   });
 
   function updateTemp() {
+    $('#display').text(thermostat.display);
     $('#temp').text(thermostat.temp);
     $('#temp').attr('class', thermostat._currentEnergyUsage());
     $('#_currentEnergyUsage').text(thermostat._currentEnergyUsage());

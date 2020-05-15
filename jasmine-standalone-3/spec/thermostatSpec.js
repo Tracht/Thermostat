@@ -124,7 +124,7 @@ describe("Thermostat", function() {
   describe("when MINTEMP is 10", function() {
     it("can't get a temp of 9", function() {
       for(var i = 0; i < 11; i--) {
-        thermostat.decrTemp()
+        thermostat.decrTemp();
       }
       console.log(thermostat.temp)
       expect(thermostat.decrTemp).toMatch("you've reached the minimum temperature")
@@ -139,7 +139,7 @@ describe("Thermostat", function() {
 
   describe("when user turns off powerSave", function() {
     it("isPowerSaveOn displays 'OFF' to the user", function() {
-      thermostat.powerSaveOff()
+      thermostat.powerSaveOff();
       expect(thermostat._isPowerSaveOn).toMatch("power saving mode is OFF")
     })
   })
@@ -147,7 +147,7 @@ describe("Thermostat", function() {
 
   describe("when MAX temp is reached & powerSaveOn (25)", function() {
     it("displays message to user", function() {
-      for (var i = 0; i < 5; i++) {
+      for (var i = 0; i < 10; i++) {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp);
@@ -158,11 +158,23 @@ describe("Thermostat", function() {
 
   describe("when MAX temp is reached & powerSaveOff (32)", function() {
     it("displays message to user", function() {
-      for(var i=0; i<16; i++) {
+      thermostat.powerSaveOff();
+      console.log(_isPowerSaveOn());
+      for(var i=0; i<12; i++) {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp);
       expect(thermostat.display).toMatch("you've reached the maximum temperature")
+    });
+  });
+
+  describe("when MIN temp is reached (10)", function() {
+    it("displays message to user", function() {
+      for(var i=0; i<10; i--) {
+        thermostat.decrTemp();
+      }
+      console.log(thermostat.temp);
+      expect(thermostat.display).toMatch("you've reached the lowest temperature")
     });
   });
 
