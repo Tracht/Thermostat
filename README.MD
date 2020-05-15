@@ -18,9 +18,10 @@ Specification:
 Objects & Methods
 * Thermostat     
 * * temp
-* * incr_temp
-* * decr_temp
-* * turn_on_powersave
-* * turn_off_powersave
-* * reset_temp
-* * return_current_energy_usage
+* * incrTemp
+* * decrTemp
+* * powerSaveOn
+* * powerSaveOff
+* * resetTemp
+* * _currentEnergyUsage
+* * _isPowerSaveOn
