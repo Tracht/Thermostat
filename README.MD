@@ -34,4 +34,5 @@ Objects & Methods
 * * _isPowerSaveOn
 
 # Preview
+<img width="331" alt="Thermostat with WeatherAPI" src="https://user-images.githubusercontent.com/28805811/83115555-6d88c180-a0c2-11ea-8c35-85f62b6d5471.png">
 
