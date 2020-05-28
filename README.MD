@@ -15,6 +15,7 @@ Implemented all specifications:
 * implement a weather API to get temperature in the user's current city
 
 # Outstanding tasks: 
+* Convert sunset time
 * Introduce persistence by building a web server to provide the weather API using Sinatra
 * Code review / refactoring
 * Add CSS 
@@ -31,3 +32,6 @@ Objects & Methods
 * * resetTemp
 * * _currentEnergyUsage
 * * _isPowerSaveOn
+
+# Preview
+
