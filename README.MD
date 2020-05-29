@@ -3,7 +3,7 @@
 Create a single web-page thermostat app 
 
 ## Preview 
-<img width="331" alt="Thermostat with WeatherAPI" src="https://user-images.githubusercontent.com/28805811/83115555-6d88c180-a0c2-11ea-8c35-85f62b6d5471.png">
+<img width="400" alt="ThermostatJS" src="https://user-images.githubusercontent.com/28805811/83281055-6e5b4980-a1cf-11ea-86bb-25005d8624d1.png">
 
 ## How to use on your computer
 - clone this repo with git clone
