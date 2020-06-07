@@ -44,3 +44,6 @@ open index.html
 | | resetTemp() |
 | | _currentEnergyUsage() |
 | | _isPowerSaveOn() |
+
+## Diagramming HTTP request/response cycle
+![image](https://user-images.githubusercontent.com/28805811/83968533-d7267e00-a8c1-11ea-8103-7faa22beee75.png)
