@@ -6,9 +6,12 @@ Create a single web-page thermostat app
 <img width="400" alt="ThermostatJS" src="https://user-images.githubusercontent.com/28805811/83281055-6e5b4980-a1cf-11ea-86bb-25005d8624d1.png">
 
 ## How to use on your computer
-- clone this repo with git clone
-- open index.html in your browser of choice
-- have fun! 😎
+1. clone this repo with git clone
+2. from the command line, run this command and the browser will automatically open
+```
+open index.html
+``` 
+3. have fun! 😎
 
 ## Specifications included
 * Thermostat starts at 20 degrees
