@@ -56,12 +56,19 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   max-height: 40px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #header .logo h1 {
     font-size: 28px;
     padding: 8px 0;
   }
-}
+} */
+
+/* @media (min-width: 1001px) { 
+  #header .logo h1 { 
+    flex: 1 0 31%; 
+  } 
+} */
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/

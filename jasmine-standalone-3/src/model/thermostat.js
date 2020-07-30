@@ -6,14 +6,14 @@ class Thermostat {
     this.temp = 20;
     this.MINTEMP = 10;
     this.MAXTEMP = 25;
-    this.display = "Temperature (C) is currently at:"
+    this.display = "Thermostat is currently set to (C):"
   };
 
   incrTemp() {
     if (this.temp >= this.MAXTEMP) {
      return this.display = "You've reached the maximum allowed of: "
     }
-    this.display = "Temperature (C) is currently at:"
+    this.display = "Thermostat is currently set to (C):";
     this.temp += 1;
   }
 
@@ -21,7 +21,7 @@ class Thermostat {
     if (this.temp <= this.MINTEMP) {
       return this.display = "You've reached the minimum temperature allowed of: "
     }
-    this.display = "Your home's temperature is currently set to (C):"
+    this.display = "Thermostat is currently set to (C):";
     this.temp -= 1;
   }
 
@@ -40,20 +40,20 @@ class Thermostat {
   // private method
   _isPowerSaveOn() {
     if (this.MAXTEMP === 25) {
-      return "You have turned on powersaving mode."
+      return "Powersaving mode is on."
     }
     else {
-      return "You have turned off powersaving mode."
+      return "Powersaving mode is off."
     }
   }
 
   _currentEnergyUsage() {
     if ( this.temp < 18 ) {
-       return "Your energy usage is currently: low"
+       return "Current energy usage: low"
     } else if ( this.temp >= 25 ) {
-        return "Your energy usage is currently: high"
+        return "Current energy usage: high"
     } else {
-        return "Your energy usage is currently: medium"
+        return "Current energy usage: medium"
     }
   }
 
