@@ -2,17 +2,42 @@
 <html>
   <head>
     <title> Thermostat </title>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/thermostat_styling.css">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="styling/css/style.css" rel="stylesheet" type="text/css">
+    
+    <!-- =======================================================
+    * Template Name: Siimple - v2.1.0
+    * Template URL: https://bootstrapmade.com/free-bootstrap-landing-page/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
   </head>
+  
   <body>
-      <section>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div class="hero-container">
+        <h1>Welcome to your remote thermostat</h1>
+        <h2>Adjust your home's thermostat from anywhere and check out the weather worldwide.</h2>
+        
+        <section>
           <h4>
             <span id="display"></span>
             <span id="temp"></span>
           </h4>
+          <h3 id= "_isPowerSaveOn"> </h4>
           <h4 id="_currentEnergyUsage"></h4>
-          <h4 id= "_isPowerSaveOn"> </h4>
           <p>
             <button id= "incrTemp" type="button" name="incrTemp"> + </button>
             <button id= "decrTemp" type="button" name="decrTemp"> - </button>
@@ -20,27 +45,109 @@
             <button id= "powerSaveOn" type="button" name="powerSaveOn"> power save ON </button>
             <button id= "powerSaveOff" type="button" name="powerSaveOff"> power save OFF </button>
           </p>
-
-          <select id="current-city">
+          <select id="current-city" </div>>
             <option value="choose a city">choose a city</option>
-            <option value="austin">Austin</option>
-            <option value="toronto">Toronto</option>
-            <option value="berlin">Berlin</option>
-            <option value="tokyo">Tokyo</option>
             <option value="london">London</option>
+            <option value="austin">Austin</option>
+            <option value="beijing">Beijing</option>
+            <option value="berlin">Berlin</option>
+            <option value="moscow">Moscow</option>
             <option value="paris">Paris</option>
+            <option value="toronto">Toronto</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="singapore">Singapore</option>
+            <option value="sydney">Sydney</option>
           </select>
-          <h4>Current Temperature: <span id="current-temperature"></span> C</h4>
-          <h4>Feels Like: <span id="current-temperature-feels-like"></span> C</h4>
-          <h4>Barometric pressure: <span id="barometric-pressure"></span></h4>
-          <h4>Humidity: <span id="humidity"></span> %</h4>
-          <h4>Cloudy-meter: <span id="cloudy-meter"></span></h4>
-          <h4>Sunset: <span id="sunset"></span></h4>
+          <!-- <h4>Sunset: <span id="sunset"></span></h4> -->
+        </section>
 
-      </section>
+      </div>
+    </section> <!-- #hero -->
+
+    <!-- ======= Thermostat ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container"></div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src="styling/img/temperature.png" class="card-img-top" alt="...">
+              <div class="card-icon"></div>
+              <div class="card-body">
+                <h5 class="card-title">Current Temperature (in Celsius)</h5>
+                <p class="card-text" id="current-temperature"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src="styling/img/feelslike.png" class="card-img-top" alt="...">
+              <div class="card-icon"></div>
+              <div class="card-body">
+                <h5 class="card-title">Feels Like (in Celsius)</h5>
+                <p class="card-text" id="current-temperature-feels-like"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src="styling/img/humidity.png" class="card-img-top" alt="...">
+              <div class="card-icon"></div>
+              <div class="card-body">
+                <h5 class="card-title">Humidity (0-100%)</h5>
+                <p class="card-text"> <span id="humidity"></span> </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src="styling/img/cloud.png" class="card-img-top" alt="...">
+              <div class="card-icon"></div>
+              <div class="card-body">
+                <h5 class="card-title">Cloudy-meter (0-100%)</h5>
+                <p class="card-text" id="cloudy-meter"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src="styling/img/barometer.png" class="card-img-top" alt="...">
+              <div class="card-icon"></div>
+              <div class="card-body">
+                <h5 class="card-title">Barometric Pressure</h5>
+                <div class="card-text"> 
+                  <p id="barometric-pressure" ></p> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </section><!-- End Thermostatt -->
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="credits">
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div>
+          <p>Icons made by: </p>
+          <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a>, 
+          <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a>, 
+          <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, and
+          <a href="https://www.flaticon.com/authors/dinosoftlabs" title="DinosoftLabs">DinosoftLabs</a> 
+          from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.
+        </div>
+        
+      </div>
+    </div>
+  </footer> <!-- End #footer -->
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script  type="text/javascript"  src="src/model/thermostat.js"></script>
     <script  type="text/javascript"  src="src/controller/interface.js"></script>
+
   </body>
 </html>
