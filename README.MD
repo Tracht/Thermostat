@@ -17,6 +17,12 @@ A single web-page thermostat app
 * Your home's energy usage is displayed. Medium usage is between 18-25C.
 * You can find out the weather across a range of cities worldwide.
 
+## Tech Stack
+* Javascript, JQuery, Bootstrap, Jasmine (unit tests)
+
+## To run the tests:
+* From the command line, run `open SpecRunner.html`
+
 ## Outstanding tasks
 * Convert sunset time
 * Introduce persistence by building a web server to provide the weather API using Sinatra
