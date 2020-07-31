@@ -17,7 +17,7 @@ A single page thermostat web app
 
 ## Specifications included
 * Thermostat starts at 20 degrees, the minimum temp is 10 degrees. 
-* If power saving mode is on, the maximum temperature is 25 degrees, otherwise it is 32 degrees if it is off. 
+* If power saving mode is on, the maximum temperature is 25 degrees, otherwise it is 32 degrees if power saving mode is off. 
 * Power saving mode is on by default
 * You can increase/decrease the the thermostat with the up/down buttons. Click the reset button to revert to 20 degrees. 
 * Your home's energy usage is displayed. Medium usage is between 18-25C.
