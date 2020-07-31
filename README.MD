@@ -1,9 +1,8 @@
 # Thermostat
-
-Create a single web-page thermostat app 
+A single web-page thermostat app 
 
 ## Preview 
-![image](https://user-images.githubusercontent.com/28805811/89038727-27a9dd00-d341-11ea-998a-5d42e6b158e8.png)
+<img width="421" alt="Thermostat" src="https://user-images.githubusercontent.com/28805811/89039329-262ce480-d342-11ea-8c41-6e802ae15a93.png">
 
 ## Installation guide
 1. Clone this repo with git clone
