@@ -1,5 +1,5 @@
 # Thermostat
-A single web-page thermostat app 
+A single page thermostat web app 
 
 ## Tech Stack
 * Javascript, JQuery, Bootstrap, Jasmine (unit tests)
