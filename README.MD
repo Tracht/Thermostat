@@ -2,7 +2,7 @@
 A single web-page thermostat app 
 
 ## Preview 
-<img width="421" alt="Thermostat" src="https://user-images.githubusercontent.com/28805811/89039329-262ce480-d342-11ea-8c41-6e802ae15a93.png">
+![image](https://user-images.githubusercontent.com/28805811/89039563-950a3d80-d342-11ea-809d-ba67f8f945da.png)
 
 ## Installation guide
 1. Clone this repo with git clone
