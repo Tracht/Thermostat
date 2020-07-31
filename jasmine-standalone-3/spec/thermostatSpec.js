@@ -2,7 +2,7 @@
 
 describe("Thermostat", function() {
 
-  var thermostat
+  var thermostat;
 
   beforeEach(function() {
     thermostat = new Thermostat();
@@ -69,7 +69,7 @@ describe("Thermostat", function() {
         thermostat.decrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat._currentEnergyUsage).toMatch("low-energy-usage")
+      expect(thermostat._currentEnergyUsage).toMatch("Current energy usage: low")
     });
 
     it("returns medium when temp is 23", function() {
@@ -77,7 +77,7 @@ describe("Thermostat", function() {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat._currentEnergyUsage).toMatch("medium-energy-usage")
+      expect(thermostat._currentEnergyUsage).toMatch("Current energy usage: medium")
     });
 
     it("returns high when temp is 26", function() {
@@ -85,7 +85,7 @@ describe("Thermostat", function() {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat._currentEnergyUsage).toMatch("high-energy-usage")
+      expect(thermostat._currentEnergyUsage).toMatch("Current energy usage: high")
     });
 
   });
@@ -96,7 +96,7 @@ describe("Thermostat", function() {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.incrTemp).toMatch("you've reached the maximum temperature")
+      expect(thermostat.incrTemp).toMatch("You've reached the maximum allowed of: ")
     })
   });
 
@@ -117,7 +117,7 @@ describe("Thermostat", function() {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.incrTemp).toMatch("you've reached the maximum temperature")
+      expect(thermostat.incrTemp).toMatch("You've reached the maximum allowed of: ")
     })
   });
 
@@ -127,20 +127,20 @@ describe("Thermostat", function() {
         thermostat.decrTemp();
       }
       console.log(thermostat.temp)
-      expect(thermostat.decrTemp).toMatch("you've reached the minimum temperature")
+      expect(thermostat.decrTemp).toMatch("You've reached the minimum temperature allowed of: ")
     });
   });
 
   describe("when user turns on powerSave", function() {
     it("isPowerSaveOn displays 'ON' to the user", function() {
-      expect(thermostat._isPowerSaveOn).toMatch("power saving mode is ON")
+      expect(thermostat._isPowerSaveOn).toMatch("Powersaving mode is on.")
     });
   });
 
   describe("when user turns off powerSave", function() {
     it("isPowerSaveOn displays 'OFF' to the user", function() {
       thermostat.powerSaveOff();
-      expect(thermostat._isPowerSaveOn).toMatch("power saving mode is OFF")
+      expect(thermostat._isPowerSaveOn).toMatch("Powersaving mode is off.")
     })
   })
 
@@ -151,7 +151,7 @@ describe("Thermostat", function() {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp);
-      expect(thermostat.display).toMatch("you've reached the maximum temperature")
+      expect(thermostat.display).toMatch("You've reached the minimum temperature allowed of: ")
     });
   });
 
@@ -164,7 +164,7 @@ describe("Thermostat", function() {
         thermostat.incrTemp();
       }
       console.log(thermostat.temp);
-      expect(thermostat.display).toMatch("you've reached the maximum temperature")
+      expect(thermostat.display).toMatch("You've reached the minimum temperature allowed of: ")
     });
   });
 
@@ -174,7 +174,7 @@ describe("Thermostat", function() {
         thermostat.decrTemp();
       }
       console.log(thermostat.temp);
-      expect(thermostat.display).toMatch("you've reached the lowest temperature")
+      expect(thermostat.display).toMatch("You've reached the minimum temperature allowed of: ")
     });
   });
 
