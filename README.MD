@@ -1,6 +1,12 @@
 # Thermostat
 A single web-page thermostat app 
 
+## Tech Stack
+* Javascript, JQuery, Bootstrap, Jasmine (unit tests)
+
+## To run the tests:
+* From the command line, run `open SpecRunner.html`
+
 ## Preview 
 ![image](https://user-images.githubusercontent.com/28805811/89039563-950a3d80-d342-11ea-809d-ba67f8f945da.png)
 
@@ -16,12 +22,6 @@ A single web-page thermostat app
 * You can increase/decrease the the thermostat with the up/down buttons. Click the reset button to revert to 20 degrees. 
 * Your home's energy usage is displayed. Medium usage is between 18-25C.
 * You can find out the weather across a range of cities worldwide.
-
-## Tech Stack
-* Javascript, JQuery, Bootstrap, Jasmine (unit tests)
-
-## To run the tests:
-* From the command line, run `open SpecRunner.html`
 
 ## Outstanding tasks
 * Convert sunset time
