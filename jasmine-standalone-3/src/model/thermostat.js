@@ -27,6 +27,9 @@ class Thermostat {
 
   powerSaveOn() {
     this.MAXTEMP = 25
+    if (this.temp > 25 ) {
+      this.temp = 25; 
+    } 
   }
 
   powerSaveOff() {
