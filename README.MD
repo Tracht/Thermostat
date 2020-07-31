@@ -5,13 +5,10 @@ Create a single web-page thermostat app
 ## Preview 
 ![image](https://user-images.githubusercontent.com/28805811/89038727-27a9dd00-d341-11ea-998a-5d42e6b158e8.png)
 
-## How to use on your computer
-1. clone this repo with git clone
-2. from the command line, run this command and the browser will automatically open
-```
-open index.html
-``` 
-3. have fun! 😎
+## Installation guide
+1. Clone this repo with git clone
+2. From the command line, run `open index.html ` to open the website in the browser. 
+3. Have fun! 😎
 
 ## Specifications included
 * Thermostat starts at 20 degrees, the minimum temp is 10 degrees. 
