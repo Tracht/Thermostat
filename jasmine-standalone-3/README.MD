@@ -1,6 +1,12 @@
 # Thermostat
 A single web-page thermostat app 
 
+## Tech Stack
+* Javascript, JQuery, Bootstrap, Jasmine (unit tests)
+
+## To run the tests:
+* From the command line, run `open SpecRunner.html`
+
 ## Preview 
 ![image](https://user-images.githubusercontent.com/28805811/89039563-950a3d80-d342-11ea-809d-ba67f8f945da.png)
 
