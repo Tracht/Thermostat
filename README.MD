@@ -3,7 +3,9 @@
 Create a single web-page thermostat app 
 
 ## Preview 
-<img width="400" alt="ThermostatJS" src="https://user-images.githubusercontent.com/28805811/83281055-6e5b4980-a1cf-11ea-86bb-25005d8624d1.png">
+![image](https://user-images.githubusercontent.com/28805811/89021132-4fd51400-d320-11ea-901b-6fc5b6a20ec4.png)
+
+![image](https://user-images.githubusercontent.com/28805811/89021151-55caf500-d320-11ea-923e-1f1541b4ddf2.png)
 
 ## How to use on your computer
 1. clone this repo with git clone
