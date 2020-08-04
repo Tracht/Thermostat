@@ -3,6 +3,7 @@ A single page thermostat web app
 
 ## Tech Stack
 * Javascript, JQuery, Bootstrap, Jasmine (unit tests)
+* [OpenWeather API](https://openweathermap.org/api/one-call-api?gclid=EAIaIQobChMIxtWhzteB6wIVBNZ3Ch0PQAhFEAAYAyAAEgLyf_D_BwE)
 
 ## To run the tests:
 * From the command line, run `open SpecRunner.html`
